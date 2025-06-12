@@ -1,0 +1,92 @@
+.layer6 {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-blend-mode: difference;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.layer6 video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* Масштабує відео, зберігаючи пропорції */
+}
+
+.layer6 .join-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	color: white;
+	background: #00000074;
+	text-shadow: 2px 2px #0d1117;
+}
+
+.layer6 .join-page h1 {
+	animation: change-color 3s infinite alternate;
+}
+
+@keyframes change-color {
+	0% {
+		color: white;
+	}
+
+	100% {
+		color: gold;
+	}
+}
+
+.icon-contact {
+	cursor: pointer;
+}
+
+.icon-contact{
+	width: 100px;
+	height: 100px;
+	fill: white;
+	transition: all .2s cubic-bezier(1, -0.02, 0, -0.9);
+}
+.icon-pointer {
+	width: 50px;
+	height: 50px;
+	fill: white;
+	transition: all .2s cubic-bezier(1, -0.02, 0, -0.9);
+}
+
+.icon-contact:hover {
+	background: gold;
+	border-radius: 50%;
+	transform: scale(1.2);
+}
+
+.icon-contact:active {
+	background: rgb(4, 4, 4);
+	border-radius: 50%;
+	transform: scale(0.9);
+}
+
+.icon-pointer {
+	animation: change-pos 1s infinite alternate;
+}
+
+@keyframes change-pos {
+	0% {
+		transform: rotate(180deg) translateY(25px);
+	}
+
+	100% {
+		transform: rotate(180deg) translateY(-25px);
+	}
+}
