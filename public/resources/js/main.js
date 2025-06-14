@@ -27,7 +27,7 @@ function about() {
 
 function services() {
     collapse();
-    layers[2].classList.add("active");
+    layers[6].classList.add("active");
 }
 
 function portfolio() {

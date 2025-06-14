@@ -12,24 +12,23 @@
 	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
 	<title>FrontEnd Summer Sprint</title>
-	<link rel="stylesheet" href="/FSSprint/resources/swiper-js/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="/resources/swiper-js/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-	<link rel="stylesheet" href="/FSSprint/resources/css/loader.css" />
-	<link rel="stylesheet" href="/FSSprint/resources/css/hamburger.css" />
-	<link rel="stylesheet" href="/FSSprint/resources/css/home.css" />
-	<link rel="stylesheet" href="/FSSprint/resources/css/about.css" />
-	<link rel="stylesheet" href="/FSSprint/resources/css/services.css" />
-	<link rel="stylesheet" href="/FSSprint/resources/css/portfolio.css" />
-	<link rel="stylesheet" href="/FSSprint/resources/css/comments.css" />
-	<link rel="stylesheet" href="/FSSprint/resources/css/contact.css" />
-	<link rel="stylesheet" href="/FSSprint/resources/css/program.css" />
-	<link href="/FSSprint/resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
-	<link rel="stylesheet" href="/FSSprint/resources/css/style.css" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/FSSprint/resources/favicon_io/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/FSSprint/resources/favicon_io/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/FSSprint/resources/favicon_io/favicon-16x16.png">
-	<link rel="manifest" href="/FSSprint/resources/favicon_io/site.webmanifest">
-  <script type="module" crossorigin src="/FSSprint/assets/index-BL6ibwsA.js"></script>
+	<link rel="stylesheet" href="/resources/css/loader.css" />
+	<link rel="stylesheet" href="/resources/css/hamburger.css" />
+	<link rel="stylesheet" href="/resources/css/home.css" />
+	<link rel="stylesheet" href="/resources/css/about.css" />
+	<link rel="stylesheet" href="/resources/css/services.css" />
+	<link rel="stylesheet" href="/resources/css/portfolio.css" />
+	<link rel="stylesheet" href="/resources/css/comments.css" />
+	<link rel="stylesheet" href="/resources/css/contact.css" />
+	<link rel="stylesheet" href="/resources/css/program.css" />
+	<link href="/resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/resources/css/style.css" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/resources/favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="/resources/favicon_io/site.webmanifest">
 </head>
 
 <body onload="loaded()">
@@ -70,7 +69,7 @@
 				<a href="#" onclick="about(); animate3.play(); animate4.play();">Про курс</a>
 			</li>
 			<li>
-				<a href="#" onclick="program(); animate6.play();">Програма</a>
+				<a href="#" onclick="services(); animate6.play();">Програма</a>
 			</li>
 			<li><a href="#" onclick="portfolio()">Проєкти</a></li>
 			<li><a href="#" onclick="comments()">Відгуки</a></li>
@@ -80,7 +79,7 @@
 		</ul>
 		<p>
 			© 2025
-			<a href="#" target="_blank" rel="noopener noreferrer">FSSprint</a>.
+			<a href="#" target="_blank" rel="noopener noreferrer">FrontEnd Summer Sprint</a>.
 		</p>
 	</nav>
 
@@ -163,6 +162,8 @@
 				</div>
 			</div>
 		</div>
+
+
 		<div class="layer layer2">
 			<div class="about main">
 				<!-- СЕКЦІЯ ДЛЯ СТИЛІЗАЦІЇ -->
@@ -288,11 +289,8 @@
 								<span><span>н</span><span>а</span><span>м</span><span>и</span><span>!</span></span>
 							</p>
 							</p>
-							<div class="content-buttons">
-								<a class="button download" href="program.html">програма</a>
-								<a class="button hire" href="#" class="hire" onclick="contact(); animate5.play()">долучитися</a>
-							</div>
-
+							<a class="button download" href="#" onclick="services(); animate6.play();">програма</a>
+							<a class="button hire" href="#" class="hire" onclick="contact(); animate5.play()">долучитися</a>
 						</div>
 					</div>
 					<div class="face face2"></div>
@@ -452,6 +450,8 @@
 				</div>
 			</div>
 		</div>
+
+
 		<div class="layer layer3">
 			<div class="services main">
 				<div class="hero">
@@ -470,7 +470,7 @@
 					</p>
 				</div>
 				<div class="capabilities left move-little-down">
-					<img src="/FSSprint/resources/img/elements/web_bg.png" alt="" />
+					<img src="/resources/img/elements/web_bg.png" alt="" />
 					<p class="c_content">
 						<span class="c_title">Веб-розробка</span>
 						Ви навчитеся створювати адаптивні та сучасні вебсайти, використовуючи HTML, CSS та JavaScript. Ми покажемо,
@@ -509,17 +509,17 @@
 					<div class="foot-link">
 						<a href="#" onclick="portfolio()">Онлайн-магазин</a>
 						<i class="far fa-arrow-alt-circle-right"></i>
-						<img src="/FSSprint/resources/img/portfolios/app/2.jpg" alt="portfolio" />
+						<img src="/resources/img/portfolios/app/2.jpg" alt="portfolio" />
 					</div>
 					<div class="foot-link">
 						<a href="#" onclick="portfolio()">Портфоліо</a>
 						<i class="far fa-arrow-alt-circle-right"></i>
-						<img src="/FSSprint/resources/img/portfolios/card/2.jpg" alt="portfolio" />
+						<img src="/resources/img/portfolios/card/2.jpg" alt="portfolio" />
 					</div>
 					<div class="foot-link">
 						<a href="#" onclick="portfolio()">Соціальна мережа</a>
 						<i class="far fa-arrow-alt-circle-right"></i>
-						<img src="/FSSprint/resources/img/portfolios/web/1.jpg" alt="portfolio" />
+						<img src="/resources/img/portfolios/web/1.jpg" alt="portfolio" />
 					</div>
 				</div>
 			</div>
@@ -637,122 +637,122 @@
 				</nav>
 				<div class="mymixcont">
 					<div class="mix web">
-						<img src="/FSSprint/resources/img/portfolios/web/1.jpg" alt="" />
+						<img src="/resources/img/portfolios/web/1.jpg" alt="" />
 						<span class="title">Соціальна мережа</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix icon">
-						<img src="/FSSprint/resources/img/portfolios/icon/5.jpg" alt="" />
+						<img src="/resources/img/portfolios/icon/5.jpg" alt="" />
 						<span class="title">Водний світ</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix card">
-						<img src="/FSSprint/resources/img/portfolios/card/1.jpg" alt="" />
+						<img src="/resources/img/portfolios/card/1.jpg" alt="" />
 						<span class="title">Фотографія бренду</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix web">
-						<img src="/FSSprint/resources/img/portfolios/web/2.jpg" alt="" />
+						<img src="/resources/img/portfolios/web/2.jpg" alt="" />
 						<span class="title">Посібник для студентів</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix app">
-						<img src="/FSSprint/resources/img/portfolios/app/1.jpg" alt="" />
+						<img src="/resources/img/portfolios/app/1.jpg" alt="" />
 						<span class="title">Світовий огляд</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix card">
-						<img src="/FSSprint/resources/img/portfolios/card/2.jpg" alt="" />
+						<img src="/resources/img/portfolios/card/2.jpg" alt="" />
 						<span class="title">Арт-директор</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix web">
-						<img src="/FSSprint/resources/img/portfolios/web/3.jpg" alt="" />
+						<img src="/resources/img/portfolios/web/3.jpg" alt="" />
 						<span class="title">Веб-додаток Pro</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix card">
-						<img src="/FSSprint/resources/img/portfolios/card/3.jpg" alt="" />
+						<img src="/resources/img/portfolios/card/3.jpg" alt="" />
 						<span class="title">Краса</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix web">
-						<img src="/FSSprint/resources/img/portfolios/web/4.jpg" alt="" />
+						<img src="/resources/img/portfolios/web/4.jpg" alt="" />
 						<span class="title">Дизайн Sonor</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix card">
-						<img src="/FSSprint/resources/img/portfolios/card/4.jpg" alt="" />
+						<img src="/resources/img/portfolios/card/4.jpg" alt="" />
 						<span class="title">Річард Тан</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix logo">
-						<img src="/FSSprint/resources/img/portfolios/logo/1.jpg" alt="" />
+						<img src="/resources/img/portfolios/logo/1.jpg" alt="" />
 						<span class="title">Кітті</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix icon">
-						<img src="/FSSprint/resources/img/portfolios/icon/4.jpg" alt="" />
+						<img src="/resources/img/portfolios/icon/4.jpg" alt="" />
 						<span class="title">Доміно</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix app">
-						<img src="/FSSprint/resources/img/portfolios/app/2.jpg" alt="" />
+						<img src="/resources/img/portfolios/app/2.jpg" alt="" />
 						<span class="title">Профіль світу</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix logo">
-						<img src="/FSSprint/resources/img/portfolios/logo/2.jpg" alt="" />
+						<img src="/resources/img/portfolios/logo/2.jpg" alt="" />
 						<span class="title">Спеціалізований дизайн</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix logo">
-						<img src="/FSSprint/resources/img/portfolios/logo/3.jpg" alt="" />
+						<img src="/resources/img/portfolios/logo/3.jpg" alt="" />
 						<span class="title">Нативний дизайн</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix card">
-						<img src="/FSSprint/resources/img/portfolios/card/5.jpg" alt="" />
+						<img src="/resources/img/portfolios/card/5.jpg" alt="" />
 						<span class="title">Срірам Мохан</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix logo">
-						<img src="/FSSprint/resources/img/portfolios/logo/4.jpg" alt="" />
+						<img src="/resources/img/portfolios/logo/4.jpg" alt="" />
 						<span class="title">Книжковий хробак</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix icon">
-						<img src="/FSSprint/resources/img/portfolios/icon/2.jpg" alt="" />
+						<img src="/resources/img/portfolios/icon/2.jpg" alt="" />
 						<span class="title">Футбольний клуб</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix logo">
-						<img src="/FSSprint/resources/img/portfolios/logo/5.jpg" alt="" />
+						<img src="/resources/img/portfolios/logo/5.jpg" alt="" />
 						<span class="title">Вільні нотатки</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix icon">
-						<img src="/FSSprint/resources/img/portfolios/icon/1.jpg" alt="" />
+						<img src="/resources/img/portfolios/icon/1.jpg" alt="" />
 						<span class="title">Інста-жанр</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix logo">
-						<img src="/FSSprint/resources/img/portfolios/logo/6.jpg" alt="" />
+						<img src="/resources/img/portfolios/logo/6.jpg" alt="" />
 						<span class="title">Кіношкарпетка</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix logo">
-						<img src="/FSSprint/resources/img/portfolios/logo/7.jpg" alt="" />
+						<img src="/resources/img/portfolios/logo/7.jpg" alt="" />
 						<span class="title">Громадська церква</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix app">
-						<img src="/FSSprint/resources/img/portfolios/app/3.jpg" alt="" />
+						<img src="/resources/img/portfolios/app/3.jpg" alt="" />
 						<span class="title">Погода</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
 					<div class="mix icon">
-						<img src="/FSSprint/resources/img/portfolios/icon/3.jpg" alt="" />
+						<img src="/resources/img/portfolios/icon/3.jpg" alt="" />
 						<span class="title">Улюблений магазин</span>
 						<span class="port_link">Переглянути проєкт</span>
 					</div>
@@ -869,11 +869,11 @@
 		</div>
 		<div class="layer layer6">
 			<video autoplay muted loop>
-				<source src="/FSSprint/resources/img/video.mp4" type="video/mp4">
+				<source src="/resources/img/video.mp4" type="video/mp4">
 				Ваш браузер не підтримує відео.
 			</video>
 			<div class="join-page">
-				<h1>Долучитися</h1>
+				<h1>Все, що потрібно - просто тицьнути цю кнопку і ви вже в нашій навчальній групі в TELEGRAM</h1>
 				<svg class="icon-pointer" xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
 					<path
@@ -887,8 +887,8 @@
 				</a>
 			</div>
 		</div>
-		<div class="layer layer7">
 
+		<div class="layer layer7">
 
 			<h1 class="text-4xl font-bold text-center text-white-600 mb-8">Frontend Summer Sprint</h1>
 			<p class="text-lg text-center text-white mb-12">Приєднуйтесь до нашого 2-місячного інтенсивного курсу (23
@@ -1877,38 +1877,164 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 
 
 	<!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
-	<script src="/FSSprint/resources/js/jquery.min.js"></script>
+	<script src="/resources/js/jquery.min.js"></script>
 	<!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
-	<script src="/FSSprint/resources/js/mixitup.min.js"></script>
+	<script src="/resources/js/mixitup.min.js"></script>
 	<!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, comments.js]----------------->
-	<script src="/FSSprint/resources/swiper-js/swiper-bundle.min.js"></script>
+	<script src="/resources/swiper-js/swiper-bundle.min.js"></script>
 	<!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
-	<script src="/FSSprint/resources/mapbox-gl/mapbox-gl.js"></script>
+	<script src="/resources/mapbox-gl/mapbox-gl.js"></script>
 	<!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
-	<script src="/FSSprint/resources/js/email.min.js"></script>
+	<script src="/resources/js/email.min.js"></script>
 	<!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
-	<script src="/FSSprint/resources/js/vanilla-tilt.min.js"></script>
+	<script src="/resources/js/vanilla-tilt.min.js"></script>
 	<!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
-	<script src="/FSSprint/resources/js/anime.min.js"></script>
+	<script src="/resources/js/anime.min.js"></script>
 	<!-----------------LOCAL (HOME)----------------->
-	<script src="/FSSprint/resources/js/home.js"></script>
+	<script src="/resources/js/home.js"></script>
 	<!-----------------LOCAL (ABOUT)----------------->
-	<script src="/FSSprint/resources/js/about.js"></script>
+	<script src="/resources/js/about.js"></script>
 	<!-----------------LOCAL (SERVICES)----------------->
-	<script src="/FSSprint/resources/js/services.js"></script>
+	<script src="/resources/js/services.js"></script>
 	<!-----------------LOCAL (PORTFOLIO)----------------->
-	<script src="/FSSprint/resources/js/portfolio.js"></script>
+	<script src="/resources/js/portfolio.js"></script>
 	<!-----------------LOCAL (COMMENTS)----------------->
-	<script src="/FSSprint/resources/js/comments.js"></script>
+	<script src="/resources/js/comments.js"></script>
 	<!-----------------LOCAL (MAIN FILE)----------------->
-	<script src="/FSSprint/resources/js/main.js"></script>
+	<script src="/resources/js/main.js"></script>
 
-	<!-----------------ЛОГІКА КОНТАКТІВ-------------------------->
+	<!-----------------ЛОГІКА КОНТАКТІВ-------------------------->
+	<script type="module">
+		mapboxgl.accessToken =
+			import.meta.env.VITE_MAPBOX_ACCESS_TOKEN || "";
+		var map = new mapboxgl.Map({
+			style: "mapbox://styles/mapbox/light-v10",
+			center: [30.5234, 50.4501], // Координати Києва
+			zoom: 18.5,
+			pitch: 45,
+			bearing: -17.6,
+			container: "map",
+			antialias: true,
+		});
+
+		map.on("load", function () {
+			var layers = map.getStyle().layers;
+
+			var labelLayerId;
+			for (var i = 0; i < layers.length; i++) {
+				if (
+					layers[i].type === "symbol" &&
+					layers[i].layout["text-field"]
+				) {
+					labelLayerId = layers[i].id;
+					break;
+				}
+			}
+
+			map.addLayer(
+				{
+					id: "3d-buildings",
+					source: "composite",
+					"source-layer": "building",
+					filter: ["==", "extrude", "true"],
+					type: "fill-extrusion",
+					minzoom: 15,
+					paint: {
+						"fill-extrusion-color": "#aaa",
+						"fill-extrusion-height": [
+							"interpolate",
+							["linear"],
+							["zoom"],
+							15,
+							0,
+							15.05,
+							["get", "height"],
+						],
+						"fill-extrusion-base": [
+							"interpolate",
+							["linear"],
+							["zoom"],
+							15,
+							0,
+							15.05,
+							["get", "min_height"],
+						],
+						"fill-extrusion-opacity": 0.6,
+					},
+				},
+				labelLayerId
+			);
+		});
+		function vanillaTilt(element) {
+			VanillaTilt.init(document.querySelector(element), {
+				max: 10,
+				speed: 200,
+				glare: true,
+				"max-glare": 0.5,
+			});
+		}
+
+		vanillaTilt(".info1");
+		vanillaTilt(".info2");
+		vanillaTilt(".info3");
+
+		document.querySelector("form").addEventListener("submit", (e) => {
+			e.preventDefault();
+		});
+		let form_name = document.getElementById("fname");
+		let email = document.getElementById("email");
+		let subject = document.getElementById("subject");
+		let message = document.getElementById("message");
+		let submit = document.getElementById("submit");
+
+		submit.addEventListener("click", () => {
+			if (
+				form_name.value == "" &&
+				email.value == "" &&
+				subject.value == "" &&
+				message.value == ""
+			) {
+				alert("Усі поля обов’язкові для заповнення");
+				return;
+			} else {
+				submitEmail();
+			}
+		});
+
+		emailjs.init(import.meta.env.VITE_EMAILJS_ACCESS_TOKEN);
+
+		function submitEmail() {
+			let param = {
+				method: "POST",
+				from_name: form_name.value,
+				from_email: email.value,
+				to_name: "FrontEnd Summer Sprint",
+				subject: subject.value,
+				message: message.value,
+			};
+
+			emailjs.send("service_name", "template_name", param).then(
+				function (response) {
+					alert(
+						"Успішно надіслано! " + response.status + " " + response.text
+					);
+				},
+				function (error) {
+					alert("Помилка... " + error);
+				}
+			);
+		}
+
+		document.querySelector("form").addEventListener("submit", (e) => {
+			e.preventDefault();
+		});
+	</script>
 
 	<!-----------------ЛОГІКА АНІМАЦІЙ-------------------------->
 	<script defer>
@@ -2001,9 +2127,6 @@
 		resize();
 		window.addEventListener("resize", resize);
 
-
-
-
 		// Accordion Toggle
 		function toggleAccordion(button) {
 			const content = button.nextElementSibling;
@@ -2024,6 +2147,7 @@
 			}
 		}
 	</script>
+
 	<script src="https://cdn.tailwindcss.com"></script>
 </body>
 

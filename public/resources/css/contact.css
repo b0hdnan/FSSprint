@@ -36,6 +36,8 @@
 
 .layer6 .join-page h1 {
 	animation: change-color 3s infinite alternate;
+	background: #202021a1;
+	font-size: 2em;
 }
 
 @keyframes change-color {

@@ -8,6 +8,10 @@ body {
 			padding: 1em;
 		}
 
+		.layer7 h1, .layer7 h1 + p{
+			text-shadow: 1px 1px black;
+		}
+
 		.accordion-content {
 			display: none;
 			background-color: white;
@@ -25,7 +29,7 @@ body {
 
 		.accordion-button {
 			position: relative;
-			background-color: rgba(250, 131, 135, 0.789);;
+			background: #408794e0;
 			color: white;
 			padding: 1rem;
 			border-radius: 0.5rem;
@@ -34,6 +38,7 @@ body {
 			justify-content: space-between;
 			transition: background-color 0.3s;
 			border: 5px solid transparent;
+			text-shadow: 1px 1px black;
 
 		}
 		.accordion-button.open{
