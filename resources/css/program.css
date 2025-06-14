@@ -1,0 +1,92 @@
+body {
+			margin: 0;
+			overflow-x: hidden;
+			background-color: rgb(24, 32, 40);
+		}
+
+		.layer7 {
+			padding: 1em;
+		}
+
+		.layer7 h1, .layer7 h1 + p{
+			text-shadow: 1px 1px black;
+		}
+
+		.accordion-content {
+			display: none;
+			background-color: white;
+			color: black;
+			padding: 1rem;
+			border-bottom-left-radius: 0.5rem;
+			border-bottom-right-radius: 0.5rem;
+			transition: all 0.3s ease-out;
+		}
+
+		.accordion-content.open {
+			display: block;
+			border-radius: 0 0 10px 10px;
+		}
+
+		.accordion-button {
+			position: relative;
+			background: #408794e0;
+			color: white;
+			padding: 1rem;
+			border-radius: 0.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			transition: background-color 0.3s;
+			border: 5px solid transparent;
+			text-shadow: 1px 1px black;
+
+		}
+		.accordion-button.open{
+			border-radius: 0.5rem 0.5rem 0 0;
+		}
+		.accordion-button:hover {
+			border: 5px solid white;
+
+		}
+
+		.accordion-button .icon {
+			font-size: 1.3rem;
+			margin-left: 1rem;
+			transition: transform 0.3s ease;
+		}
+
+		.accordion-button.open .icon {
+			transform: rotate(180deg);
+		}
+
+		p.text-white {
+			padding: 20px;
+			font-weight: 900;
+		}
+
+		@keyframes float {
+
+			0%,
+			100% {
+				transform: translateY(0);
+			}
+
+			50% {
+				transform: translateY(-20px);
+			}
+		}
+
+		.animated-text {
+			opacity: 0;
+			animation: fadeIn 0.5s forwards;
+		}
+
+		@keyframes fadeIn {
+			to {
+				opacity: 1;
+			}
+		}
+
+		.accordion-content p {
+			margin: 0.5rem 0;
+		}

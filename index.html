@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="keywords" content="Фронтенд, Літній спринт, Веб-розробка" />
+	<meta name="description" content="Літній спринт із фронтенд-розробки для початківців!" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+	<title>FrontEnd Summer Sprint</title>
+	<link rel="stylesheet" href="/FSSprint/resources/swiper-js/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+	<link rel="stylesheet" href="/FSSprint/resources/css/loader.css" />
+	<link rel="stylesheet" href="/FSSprint/resources/css/hamburger.css" />
+	<link rel="stylesheet" href="/FSSprint/resources/css/home.css" />
+	<link rel="stylesheet" href="/FSSprint/resources/css/about.css" />
+	<link rel="stylesheet" href="/FSSprint/resources/css/services.css" />
+	<link rel="stylesheet" href="/FSSprint/resources/css/portfolio.css" />
+	<link rel="stylesheet" href="/FSSprint/resources/css/comments.css" />
+	<link rel="stylesheet" href="/FSSprint/resources/css/contact.css" />
+	<link rel="stylesheet" href="/FSSprint/resources/css/program.css" />
+	<link href="/FSSprint/resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/FSSprint/resources/css/style.css" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/FSSprint/resources/favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/FSSprint/resources/favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/FSSprint/resources/favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="/FSSprint/resources/favicon_io/site.webmanifest">
+  <script type="module" crossorigin src="/FSSprint/assets/index-BL6ibwsA.js"></script>
+</head>
+
+<body onload="loaded()">
+	<div class="loader">
+		<div class="c c1"></div>
+		<div class="c c2"></div>
+		<div class="c c3"></div>
+		<div class="c c4"></div>
+		<div class="c c5"></div>
+		<div class="c c6"></div>
+	</div>
+	<script>
+		let loader = document.querySelector(".loader");
+		function loaded() {
+			loader.classList.add("remove");
+			setTimeout(() => {
+				loader.style.display = "none";
+			}, 1000);
+		}
+	</script>
+	<!-- ГАМБУРГЕР-МЕНЮ (видимість залежить від розміру екрана) -->
+	<div class="hamburger">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+
+	<!-- ОСНОВНА НАВІГАЦІЯ -->
+	<nav class="navigation">
+		<h1>
+			FrontEnd
+			<div></div>
+			<div></div>
+		</h1>
+		<ul>
+			<li><a href="index.html" onclick="home()">Головна</a></li>
+			<li>
+				<a href="#" onclick="about(); animate3.play(); animate4.play();">Про курс</a>
+			</li>
+			<li>
+				<a href="#" onclick="services(); animate6.play();">Програма</a>
+			</li>
+			<li><a href="#" onclick="portfolio()">Проєкти</a></li>
+			<li><a href="#" onclick="comments()">Відгуки</a></li>
+			<li>
+				<a href="#" onclick="contact(); animate5.play()">Контакти</a>
+			</li>
+		</ul>
+		<p>
+			© 2025
+			<a href="#" target="_blank" rel="noopener noreferrer">FrontEnd Summer Sprint</a>.
+		</p>
+	</nav>
+
+	<div class="container">
+		<div class="layer layer1 active">
+			<div class="home main">
+				<div class="canvas_container">
+					<canvas></canvas>
+				</div>
+				<div class="content-for-home">
+					<div class="img-container"></div>
+					<h1>літній спринт з веброзробки</h1>
+					<div class="social-icons">
+						<div class="s-icon">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<div class="s-name">Facebook</div>
+						</div>
+						<div class="s-icon">
+							<a href="#">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<div class="s-name">Twitter</div>
+						</div>
+						<div class="s-icon">
+							<a href="#">
+								<i class="fab fa-github"></i>
+							</a>
+							<div class="s-name">GitHub</div>
+						</div>
+						<div class="s-icon">
+							<a href="#">
+								<i class="fab fa-codepen"></i>
+							</a>
+							<div class="s-name">CodePen</div>
+						</div>
+						<div class="s-icon">
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<div class="s-name">Instagram</div>
+						</div>
+						<div class="s-icon">
+							<a href="#">
+								<i class="fas fa-envelope"></i>
+							</a>
+							<div class="s-name">Email</div>
+						</div>
+					</div>
+
+					<div class="side-nav">
+						<button onclick="about(); animate3.play(); animate4.play();">
+							<span class="w">У</span>
+							<span class="tooltip"> Чому веброзробка </span>
+						</button>
+						<button onclick="services(); animate6.play();">
+							<span class="w">С</span>
+							<span class="tooltip"> Що ми вивчатимемо? </span>
+						</button>
+						<button onclick="portfolio()">
+							<span class="w">П</span>
+							<span class="tooltip">
+								Переглянути приклади робіт?
+							</span>
+						</button>
+						<button onclick="comments()">
+							<span class="w">І</span>
+							<span class="tooltip"> Що кажуть учасники? </span>
+						</button>
+						<button onclick="contact(); animate5.play()">
+							<span class="w">X</span>
+							<span class="tooltip"> Хто мій ментор? </span>
+						</button>
+					</div>
+
+					<div class="titles-for-side-nav">
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="layer layer2">
+			<div class="about main">
+				<!-- СЕКЦІЯ ДЛЯ СТИЛІЗАЦІЇ -->
+				<div class="styling">
+					<div class="absolute box"></div>
+					<div class="absolute circle"></div>
+					<div class="absolute triangle"></div>
+					<div class="absolute dots">
+						<div class="dot dot1"></div>
+						<div class="dot dot2"></div>
+						<div class="dot dot3"></div>
+						<div class="dot dot4"></div>
+						<div class="dot dot5"></div>
+						<div class="dot dot6"></div>
+						<div class="dot dot7"></div>
+						<div class="dot dot8"></div>
+						<div class="dot dot9"></div>
+						<div class="dot dot10"></div>
+						<div class="dot dot11"></div>
+						<div class="dot dot12"></div>
+						<div class="dot dot13"></div>
+						<div class="dot dot14"></div>
+						<div class="dot dot15"></div>
+						<div class="dot dot16"></div>
+						<div class="dot dot17"></div>
+						<div class="dot dot18"></div>
+						<div class="dot dot19"></div>
+						<div class="dot dot20"></div>
+						<div class="dot dot21"></div>
+						<div class="dot dot22"></div>
+						<div class="dot dot23"></div>
+						<div class="dot dot24"></div>
+					</div>
+
+					<svg class="wave absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 320">
+						<path fill-opacity="1"
+							d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+						</path>
+					</svg>
+
+					<svg class="wave absolute opposite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 320">
+						<path fill-opacity="1"
+							d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+						</path>
+					</svg>
+				</div>
+
+				<!-- ОСНОВНИЙ КОНТЕНТ -->
+				<div class="wrapper">
+					<div class="face face1">
+						<div class="content">
+							<p></p>
+							<h1>Вітаю, майбутній розробнику!</h1>
+							<p class="text">
+							<p class="text">
+								<span><span>П</span><span>р</span><span>и</span><span>в</span><span>і</span><span>т</span><span>!</span></span>
+								<span><span>Я</span></span>
+								<span><span>т</span><span>в</span><span>і</span><span>й</span></span>
+								<span><span>н</span><span>о</span><span>в</span><span>и</span><span>й</span></span>
+								<span><span>м</span><span>е</span><span>н</span><span>т</span><span>о</span><span>р</span></span>
+								<span><span>і</span><span>з</span></span>
+								<span><span>в</span><span>е</span><span>б</span><span>р</span><span>о</span><span>з</span><span>р</span><span>о</span><span>б</span><span>к</span><span>и</span><span>.</span></span>
+								<span><span>П</span><span>р</span><span>и</span><span>є</span><span>д</span><span>н</span><span>у</span><span>й</span><span>с</span><span>я</span></span>
+								<span><span>д</span><span>о</span></span>
+								<span><span>н</span><span>а</span><span>с</span><span>!</span></span>
+								<span><span>В</span><span>и</span><span>в</span><span>ч</span><span>а</span><span>й</span></span>
+								<span><span>H</span><span>T</span><span>M</span><span>L</span><span>,</span></span>
+								<span><span>C</span><span>S</span><span>S</span><span>,</span></span>
+								<span><span>J</span><span>а</span><span>в</span><span>а</span><span>S</span><span>ц</span><span>р</span><span>и</span><span>п</span><span>т</span><span>,</span></span>
+								<span><span>а</span></span>
+								<span><span>т</span><span>а</span><span>к</span><span>о</span><span>ж</span></span>
+								<span><span>с</span><span>у</span><span>ч</span><span>а</span><span>с</span><span>н</span><span>і</span></span>
+								<span><span>ф</span><span>р</span><span>е</span><span>й</span><span>м</span><span>в</span><span>о</span><span>р</span><span>к</span><span>и</span></span>
+								<span><span>т</span><span>а</span></span>
+								<span><span>і</span><span>н</span><span>с</span><span>т</span><span>р</span><span>у</span><span>м</span><span>е</span><span>н</span><span>т</span><span>и</span><span>:</span></span>
+								<span><span>R</span><span>e</span><span>а</span><span>с</span><span>t</span><span>,</span></span>
+								<span><span>V</span><span>u</span><span>e</span><span>,</span></span>
+								<span><span>N</span><span>о</span><span>d</span><span>e</span><span>.</span><span>j</span><span>s</span><span>,</span></span>
+								<span><span>T</span><span>у</span><span>р</span><span>е</span><span>S</span><span>ц</span><span>р</span><span>и</span><span>р</span><span>т</span><span>,</span></span>
+								<span><span>S</span><span>а</span><span>с</span><span>с</span><span>,</span></span>
+								<span><span>W</span><span>е</span><span>б</span><span>р</span><span>а</span><span>с</span><span>к</span></span>
+								<span><span>і</span></span>
+								<span><span>н</span><span>е</span></span>
+								<span><span>т</span><span>і</span><span>л</span><span>ь</span><span>к</span><span>и</span><span>!</span></span>
+								<span><span>С</span><span>т</span><span>в</span><span>о</span><span>р</span><span>ю</span><span>й</span></span>
+								<span><span>к</span><span>р</span><span>у</span><span>т</span><span>і</span></span>
+								<span><span>с</span><span>а</span><span>й</span><span>т</span><span>и</span></span>
+								<span><span>я</span><span>к</span></span>
+								<span><span>с</span><span>п</span><span>р</span><span>а</span><span>в</span><span>ж</span><span>н</span><span>и</span><span>й</span></span>
+								<span><span>п</span><span>р</span><span>о</span><span>ф</span><span>і</span><span>.</span></span>
+								<span><span>О</span><span>т</span><span>р</span><span>и</span><span>м</span><span>у</span><span>й</span></span>
+								<span><span>п</span><span>р</span><span>а</span><span>к</span><span>т</span><span>и</span><span>ч</span><span>н</span><span>і</span></span>
+								<span><span>н</span><span>а</span><span>в</span><span>ч</span><span>и</span><span>к</span><span>и</span><span>,</span></span>
+								<span><span>с</span><span>в</span><span>і</span><span>ж</span><span>і</span></span>
+								<span><span>і</span><span>д</span><span>е</span><span>ї</span></span>
+								<span><span>т</span><span>а</span></span>
+								<span><span>н</span><span>а</span><span>т</span><span>х</span><span>н</span><span>е</span><span>н</span><span>н</span><span>я</span><span>!</span></span>
+								<span><span>Н</span><span>а</span></span>
+								<span><span>н</span><span>а</span><span>ш</span><span>и</span><span>х</span></span>
+								<span><span>у</span><span>р</span><span>о</span><span>к</span><span>а</span><span>х</span></span>
+								<span><span>—</span></span>
+								<span><span>ц</span><span>і</span><span>к</span><span>а</span><span>в</span><span>і</span></span>
+								<span><span>п</span><span>р</span><span>о</span><span>є</span><span>к</span><span>т</span><span>и</span><span>,</span></span>
+								<span><span>в</span><span>е</span><span>с</span><span>е</span><span>л</span><span>і</span></span>
+								<span><span>ж</span><span>а</span><span>р</span><span>т</span><span>и</span></span>
+								<span><span>т</span><span>а</span></span>
+								<span><span>п</span><span>р</span><span>и</span><span>є</span><span>м</span><span>н</span><span>а</span></span>
+								<span><span>а</span><span>т</span><span>м</span><span>о</span><span>с</span><span>ф</span><span>е</span><span>р</span><span>а</span><span>.</span></span>
+								<span><span>О</span><span>п</span><span>а</span><span>н</span><span>у</span><span>й</span></span>
+								<span><span>к</span><span>о</span><span>д</span><span>и</span><span>н</span><span>г</span></span>
+								<span><span>і</span></span>
+								<span><span>с</span><span>т</span><span>а</span><span>н</span></span>
+								<span><span>м</span><span>а</span><span>й</span><span>с</span><span>т</span><span>р</span><span>о</span><span>м</span></span>
+								<span><span>у</span></span>
+								<span><span>с</span><span>в</span><span>і</span><span>т</span><span>і</span></span>
+								<span><span>І</span><span>Т</span><span>!</span></span>
+								<span><span>Т</span><span>и</span></span>
+								<span><span>ц</span><span>е</span></span>
+								<span><span>м</span><span>о</span><span>ж</span><span>е</span><span>ш</span></span>
+								<span><span>—</span></span>
+								<span><span>в</span><span>ч</span><span>и</span><span>с</span><span>я</span></span>
+								<span><span>з</span></span>
+								<span><span>н</span><span>а</span><span>м</span><span>и</span><span>!</span></span>
+							</p>
+							</p>
+							<a class="button download" href="#" onclick="services(); animate6.play();">програма</a>
+							<a class="button hire" href="#" class="hire" onclick="contact(); animate5.play()">долучитися</a>
+						</div>
+					</div>
+					<div class="face face2"></div>
+				</div>
+
+				<!-- НАВІГАЦІЯ ДЛЯ СЕКЦІЇ ПРО НАС -->
+				<nav class="about_nav">
+					<ul>
+						<li>
+							<a class="active" href="#" data-text="one">Технології</a>
+						</li>
+						<li>
+							<a href="#" data-text="two">Досвід менторів</a>
+						</li>
+						<li>
+							<a href="#" data-text="three">Навчання</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="about_container">
+					<!-- НАВИЧКИ -->
+					<div class="skills">
+						<div class="skill">
+							<div class="name">HTML5</div>
+							<div class="value" style="left: 95%">95%</div>
+							<div class="percent">
+								<div class="progress" style="width: 95%"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="name">CSS3</div>
+							<div class="value" style="left: 85%">85%</div>
+							<div class="percent">
+								<div class="progress" style="width: 85%"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="name">JavaScript</div>
+							<div class="value" style="left: 70%">70%</div>
+							<div class="percent">
+								<div class="progress" style="width: 70%"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="name">React</div>
+							<div class="value" style="left: 60%">60%</div>
+							<div class="percent">
+								<div class="progress" style="width: 60%"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="name">Vue.js</div>
+							<div class="value" style="left: 50%">50%</div>
+							<div class="percent">
+								<div class="progress" style="width: 50%"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="name">Tailwind CSS</div>
+							<div class="value" style="left: 65%">65%</div>
+							<div class="percent">
+								<div class="progress" style="width: 65%"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- ДОСВІД МЕНТОРІВ -->
+					<div class="experience">
+						<div class="middle_line"></div>
+						<div class="cover">
+							<i class="job_box fas fa-briefcase"></i>
+							<i class="date">Червень 2025</i>
+							<h2>Фронтенд-розробник</h2>
+							<i class="name_company">Tech Academy</i>
+							<article class="text_hidden">
+								Наші ментори мають багаторічний досвід у створенні складних вебдодатків, використовуючи сучасні
+								технології. Вони навчать вас найкращим практикам розробки та допоможуть уникнути типових помилок.
+							</article>
+						</div>
+						<div class="whitespace"></div>
+						<div class="whitespace"></div>
+						<div class="cover">
+							<i class="job_box fas fa-briefcase"></i>
+							<i class="date">Січень 2020 - Травень 2025</i>
+							<h2>Викладач фронтенду</h2>
+							<i class="name_company">CodeCamp Ukraine</i>
+							<article class="text_hidden">
+								Проведення інтенсивних курсів із HTML, CSS та JavaScript для початківців та середнього рівня. Розробка
+								навчальних матеріалів та практичних завдань.
+							</article>
+						</div>
+						<div class="cover">
+							<i class="job_box fas fa-briefcase"></i>
+							<i class="date">Лютий 2018 - Грудень 2019</i>
+							<h2>Веб-розробник</h2>
+							<i class="name_company">WebStudio</i>
+							<article class="text_hidden">
+								Створення адаптивних вебсайтів та інтерактивних інтерфейсів для клієнтів із різних галузей.
+							</article>
+						</div>
+						<div class="whitespace"></div>
+						<div class="whitespace"></div>
+						<div class="cover">
+							<i class="job_box fas fa-briefcase"></i>
+							<i class="date">Серпень 2014 - Січень 2018</i>
+							<h2>Фронтенд-розробник</h2>
+							<i class="name_company">Startup Hub</i>
+							<article class="text_hidden">
+								Розробка стартап-проєктів із використанням сучасних фреймворків та бібліотек.
+							</article>
+						</div>
+					</div>
+					<div class="education">
+						<div class="middle_line"></div>
+						<div class="cover">
+							<i class="job_box fas fa-book-reader"></i>
+							<i class="date">2020 - 2020</i>
+							<h2>Курс із React</h2>
+							<i class="name_company">Online Academy</i>
+							<article class="text_hidden">
+								Поглиблене вивчення React та Redux для створення динамічних вебдодатків.
+							</article>
+						</div>
+						<div class="whitespace"></div>
+						<div class="whitespace"></div>
+						<div class="cover">
+							<i class="job_box fas fa-book-reader"></i>
+							<i class="date">2018 - 2019</i>
+							<h2>Курс із веб-дизайну</h2>
+							<i class="name_company">Design School</i>
+							<article class="text_hidden">
+								Освоєння принципів UI/UX дизайну та створення прототипів для вебдодатків.
+							</article>
+						</div>
+						<div class="cover">
+							<i class="job_box fas fa-book-open"></i>
+							<i class="date">2016 - 2018</i>
+							<h2>Магістр комп’ютерних наук</h2>
+							<i class="name_company">КНУ ім. Тараса Шевченка</i>
+							<article class="text_hidden">
+								Поглиблене вивчення програмування, алгоритмів та веб-технологій.
+							</article>
+						</div>
+						<div class="whitespace"></div>
+						<div class="whitespace"></div>
+						<div class="cover">
+							<i class="job_box fas fa-book-open"></i>
+							<i class="date">2012 - 2016</i>
+							<h2>Бакалавр комп’ютерних наук</h2>
+							<i class="name_company">КНУ ім. Тараса Шевченка</i>
+							<article class="text_hidden">
+								Основи програмування, веб-розробки та баз даних.
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="layer layer3">
+			<div class="services main">
+				<div class="hero">
+					<span class="typography">
+						<span class="t_dummy">Ми знаємо, як</span> <br />
+						<span class="t-box">
+							<span class="box-side box-front">надихати</span>
+							<span class="box-side box-top">навчати</span>
+							<span class="box-side box-back">розвивати</span>
+							<span class="box-side box-bottom">творити</span>
+						</span>
+					</span>
+					<p class="hero-text">
+						Наш літній спринт — це ідеальний спосіб розпочати кар’єру у фронтенд-розробці. Ми пропонуємо практичні
+						заняття, менторську підтримку та реальні проєкти.
+					</p>
+				</div>
+				<div class="capabilities left move-little-down">
+					<img src="/FSSprint/resources/img/elements/web_bg.png" alt="" />
+					<p class="c_content">
+						<span class="c_title">Веб-розробка</span>
+						Ви навчитеся створювати адаптивні та сучасні вебсайти, використовуючи HTML, CSS та JavaScript. Ми покажемо,
+						як перетворити ідеї на функціональні продукти.
+						<br />
+						<a href="#">Дізнатися більше</a>
+						<i class="far fa-arrow-alt-circle-right"></i>
+					</p>
+				</div>
+				<div class="capabilities right">
+					<p class="c_content">
+						<span class="c_title">Фреймворки</span>
+						Освойте React, Vue.js та інші інструменти для створення динамічних інтерфейсів із високою продуктивністю.
+						<br />
+						<a href="#">Дізнатися більше</a>
+						<i class="far fa-arrow-alt-circle-right"></i>
+					</p>
+					<img src="/resources/img/elements/frameworks_bg.png" alt="" />
+				</div>
+				<div class="capabilities left">
+					<img src="/resources/img/elements/uiux_bg.png" alt="" style="
+                                background: #2929292f;
+                                backdrop-filter: blur(4px);
+                                border-radius: 40px;
+                            " />
+					<p class="c_content">
+						<span class="c_title">UI/UX дизайн</span>
+						Дізнайтесь, як створювати зручні та привабливі інтерфейси, які покращують досвід користувачів.
+						<br />
+						<a href="#">Дізнатися більше</a>
+						<i class="far fa-arrow-alt-circle-right"></i>
+					</p>
+				</div>
+				<div class="foot">
+					<h2>Приклади проєктів:</h2>
+					<div class="foot-link">
+						<a href="#" onclick="portfolio()">Онлайн-магазин</a>
+						<i class="far fa-arrow-alt-circle-right"></i>
+						<img src="/FSSprint/resources/img/portfolios/app/2.jpg" alt="portfolio" />
+					</div>
+					<div class="foot-link">
+						<a href="#" onclick="portfolio()">Портфоліо</a>
+						<i class="far fa-arrow-alt-circle-right"></i>
+						<img src="/FSSprint/resources/img/portfolios/card/2.jpg" alt="portfolio" />
+					</div>
+					<div class="foot-link">
+						<a href="#" onclick="portfolio()">Соціальна мережа</a>
+						<i class="far fa-arrow-alt-circle-right"></i>
+						<img src="/FSSprint/resources/img/portfolios/web/1.jpg" alt="portfolio" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layer layer4">
+			<div class="portfolio main">
+				<div class="tip main">
+					<div class="allContent">
+						<div class="description" style="display: none">
+							<div class="pro_intro">
+								<div class="nameplate">
+									<h1>Онлайн-магазин</h1>
+									<span>Категорія:
+										<span style="color: #999">Веб-розробка</span></span>
+								</div>
+								<div class="other_text">
+									<h2>Опис проєкту:</h2>
+									<p class="pro_brief" style="
+                                                color: #999;
+                                                padding-left: 15px;
+                                            ">
+										Цей проєкт — це адаптивний онлайн-магазин із зручним інтерфейсом, який дозволяє користувачам легко
+										переглядати товари та здійснювати покупки.
+									</p>
+								</div>
+							</div>
+							<div class="pro_info">
+								<h2>Інформація про проєкт</h2>
+								<p class="Date">
+									<b>Дата: </b>
+									<span style="color: #999">2025</span>
+								</p>
+								<p class="client">
+									<b>Клієнт: </b>
+									<span style="color: #999">Навчальний проєкт</span>
+								</p>
+								<p>
+									<b>Інструменти: </b>
+									<span style="color: #999">HTML, CSS, JavaScript, React</span>
+								</p>
+								<p class="link">
+									<b>Веб: </b>
+									<span style="color: #999"><a href="#">www.example.com</a></span>
+								</p>
+							</div>
+						</div>
+
+						<button class="closeButton">
+							<span>Деталі проєкту</span>
+							<div class="icon"></div>
+						</button>
+						<button class="exitButton">×</button>
+
+						<div class="port_content">
+							<div class="swiper-container-2">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="#" alt="веб-розробка" />
+									</div>
+									<div class="swiper-slide">
+										<img src="#" alt="веб-розробка" />
+									</div>
+									<div class="swiper-slide">
+										<img src="#" alt="веб-розробка" />
+									</div>
+									<div class="swiper-slide">
+										<img src="#" alt="веб-розробка" />
+									</div>
+									<div class="swiper-slide">
+										<img src="#" alt="веб-розробка" />
+									</div>
+									<div class="swiper-slide">
+										<img src="#" alt="веб-розробка" />
+									</div>
+									<div class="swiper-slide">
+										<img src="#" alt="веб-розробка" />
+									</div>
+									<div class="swiper-slide">
+										<img src="#" alt="веб-розробка" />
+									</div>
+									<div class="swiper-slide">
+										<img src="#" alt="веб-розробка" />
+									</div>
+								</div>
+								<!-- Додавання пагінації -->
+								<div class="swiper-scrollbar"></div>
+								<!-- Додавання стрілок -->
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="about_nav padding_top">
+					<ul>
+						<li>
+							<a class="filter active" href="#" data-filter="all">Усі</a>
+						</li>
+						<li>
+							<a class="filter" href="#" data-filter=".web">Веб-розробка</a>
+						</li>
+						<li>
+							<a class="filter" href="#" data-filter=".logo">Логотипи</a>
+						</li>
+						<li>
+							<a class="filter" href="#" data-filter=".card">Картки</a>
+						</li>
+						<li>
+							<a class="filter" href="#" data-filter=".app">Додатки</a>
+						</li>
+						<li>
+							<a class="filter" href="#" data-filter=".icon">Іконки</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="mymixcont">
+					<div class="mix web">
+						<img src="/FSSprint/resources/img/portfolios/web/1.jpg" alt="" />
+						<span class="title">Соціальна мережа</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix icon">
+						<img src="/FSSprint/resources/img/portfolios/icon/5.jpg" alt="" />
+						<span class="title">Водний світ</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix card">
+						<img src="/FSSprint/resources/img/portfolios/card/1.jpg" alt="" />
+						<span class="title">Фотографія бренду</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix web">
+						<img src="/FSSprint/resources/img/portfolios/web/2.jpg" alt="" />
+						<span class="title">Посібник для студентів</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix app">
+						<img src="/FSSprint/resources/img/portfolios/app/1.jpg" alt="" />
+						<span class="title">Світовий огляд</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix card">
+						<img src="/FSSprint/resources/img/portfolios/card/2.jpg" alt="" />
+						<span class="title">Арт-директор</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix web">
+						<img src="/FSSprint/resources/img/portfolios/web/3.jpg" alt="" />
+						<span class="title">Веб-додаток Pro</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix card">
+						<img src="/FSSprint/resources/img/portfolios/card/3.jpg" alt="" />
+						<span class="title">Краса</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix web">
+						<img src="/FSSprint/resources/img/portfolios/web/4.jpg" alt="" />
+						<span class="title">Дизайн Sonor</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix card">
+						<img src="/FSSprint/resources/img/portfolios/card/4.jpg" alt="" />
+						<span class="title">Річард Тан</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix logo">
+						<img src="/FSSprint/resources/img/portfolios/logo/1.jpg" alt="" />
+						<span class="title">Кітті</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix icon">
+						<img src="/FSSprint/resources/img/portfolios/icon/4.jpg" alt="" />
+						<span class="title">Доміно</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix app">
+						<img src="/FSSprint/resources/img/portfolios/app/2.jpg" alt="" />
+						<span class="title">Профіль світу</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix logo">
+						<img src="/FSSprint/resources/img/portfolios/logo/2.jpg" alt="" />
+						<span class="title">Спеціалізований дизайн</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix logo">
+						<img src="/FSSprint/resources/img/portfolios/logo/3.jpg" alt="" />
+						<span class="title">Нативний дизайн</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix card">
+						<img src="/FSSprint/resources/img/portfolios/card/5.jpg" alt="" />
+						<span class="title">Срірам Мохан</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix logo">
+						<img src="/FSSprint/resources/img/portfolios/logo/4.jpg" alt="" />
+						<span class="title">Книжковий хробак</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix icon">
+						<img src="/FSSprint/resources/img/portfolios/icon/2.jpg" alt="" />
+						<span class="title">Футбольний клуб</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix logo">
+						<img src="/FSSprint/resources/img/portfolios/logo/5.jpg" alt="" />
+						<span class="title">Вільні нотатки</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix icon">
+						<img src="/FSSprint/resources/img/portfolios/icon/1.jpg" alt="" />
+						<span class="title">Інста-жанр</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix logo">
+						<img src="/FSSprint/resources/img/portfolios/logo/6.jpg" alt="" />
+						<span class="title">Кіношкарпетка</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix logo">
+						<img src="/FSSprint/resources/img/portfolios/logo/7.jpg" alt="" />
+						<span class="title">Громадська церква</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix app">
+						<img src="/FSSprint/resources/img/portfolios/app/3.jpg" alt="" />
+						<span class="title">Погода</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+					<div class="mix icon">
+						<img src="/FSSprint/resources/img/portfolios/icon/3.jpg" alt="" />
+						<span class="title">Улюблений магазин</span>
+						<span class="port_link">Переглянути проєкт</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layer layer5">
+			<div class="testimonial">
+				<h1>
+					<span>Що кажуть наші учасники</span>
+				</h1>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="https://api.dicebear.com/7.x/adventurer/svg?seed=diana" alt="" />
+							<h4>Олена К.</h4>
+							<div class="rating">
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+							</div>
+							<p>
+								<span>“</span>
+								Літній спринт змінив моє уявлення про веб-розробку! Завдяки ментору я освоїла JavaScript та створила
+								свій перший проєкт. Дуже рекомендую!
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="https://api.dicebear.com/7.x/adventurer/svg?seed=bob" alt="" />
+							<h4>Іван П.</h4>
+							<div class="rating">
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+							</div>
+							<p>
+								<span>“</span>
+								Чудовий курс! Практичні завдання та підтримка менторів допомогли мені швидко прогресувати.
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="https://api.dicebear.com/7.x/adventurer/svg?seed=nea" alt="" />
+							<h4>Марія С.</h4>
+							<div class="rating">
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+							</div>
+							<p>
+								<span>“</span>
+								Я навчилася створювати адаптивні дизайни та працювати з React. Це був неймовірний досвід!
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="https://api.dicebear.com/7.x/adventurer/svg?seed=sherlock" alt="" />
+							<h4>Олег М.</h4>
+							<div class="rating">
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+							</div>
+							<p>
+								<span>“</span>
+								Дуже сподобалася практична спрямованість курсу. Ми створювали реальні проєкти, які я можу додати до
+								портфоліо.
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="https://api.dicebear.com/7.x/adventurer/svg?seed=sofa" alt="" />
+							<h4>Софія Д.</h4>
+							<div class="rating">
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+							</div>
+							<p>
+								<span>“</span>
+								Літній спринт — це найкращий спосіб розпочати кар’єру у фронтенді. Дякую за підтримку та знання!
+							</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="https://api.dicebear.com/7.x/adventurer/svg?seed=mak" alt="" />
+							<h4>Максим Р.</h4>
+							<div class="rating">
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+								<label>★</label>
+							</div>
+							<p>
+								<span>“</span>
+								Курс дав мені впевненість у своїх силах. Я навчився працювати з сучасними інструментами та створив
+								власний вебсайт.
+							</p>
+						</div>
+					</div>
+					<!-- Додавання пагінації -->
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+			</div>
+		</div>
+		<div class="layer layer6">
+			<video autoplay muted loop>
+				<source src="/FSSprint/resources/img/video.mp4" type="video/mp4">
+				Ваш браузер не підтримує відео.
+			</video>
+			<div class="join-page">
+				<h1>Все, що потрібно - просто тицьнути цю кнопку і ви вже в нашій навчальній групі в TELEGRAM</h1>
+				<svg class="icon-pointer" xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+					<path
+						d="M128 40c0-22.1 17.9-40 40-40s40 17.9 40 40l0 148.2c8.5-7.6 19.7-12.2 32-12.2c20.6 0 38.2 13 45 31.2c8.8-9.3 21.2-15.2 35-15.2c25.3 0 46 19.5 47.9 44.3c8.5-7.7 19.8-12.3 32.1-12.3c26.5 0 48 21.5 48 48l0 48 0 16 0 48c0 70.7-57.3 128-128 128l-16 0-64 0-.1 0-5.2 0c-5 0-9.9-.3-14.7-1c-55.3-5.6-106.2-34-140-79L8 336c-13.3-17.7-9.7-42.7 8-56s42.7-9.7 56 8l56 74.7L128 40zM240 304c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 96c0 8.8 7.2 16 16 16s16-7.2 16-16l0-96zm48-16c-8.8 0-16 7.2-16 16l0 96c0 8.8 7.2 16 16 16s16-7.2 16-16l0-96c0-8.8-7.2-16-16-16zm80 16c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 96c0 8.8 7.2 16 16 16s16-7.2 16-16l0-96z" />
+				</svg>
+				<a href="https://t.me/+GOcEoXF4nyhhNTZi"><svg class="icon-contact" xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 496 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+						<path
+							d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
+					</svg>
+				</a>
+			</div>
+		</div>
+
+		<div class="layer layer7">
+
+			<h1 class="text-4xl font-bold text-center text-white-600 mb-8">Frontend Summer Sprint</h1>
+			<p class="text-lg text-center text-white mb-12">Приєднуйтесь до нашого 2-місячного інтенсивного курсу (23
+				червня –
+				23 серпня 2025 року) з веб-розробки! Заняття проводяться 3 рази на тиждень для двох груп: Junior (9-12
+				років) та
+				Pro (13-16 років).</p>
+
+			<!-- Акордеон для групи Junior -->
+			<h2 class="text-2xl font-semibold text-white mb-4">Група Junior (9-12 років)</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 1: Що таке інтернет. Знайомство з веб-технологіями</span>
+						<i class="fas fa-file icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з основами роботи
+							інтернету та
+							веб-технологіями.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Дізнатися, як функціонує інтернет,
+							вивчити
+							основні веб-терміни, створити просту сторінку.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Обговорення принципів роботи
+							інтернету,
+							введення в HTML, практичне створення сайту в Google Sites.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення власного сайту з базовими
+							елементами (заголовки, текст, зображення).</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні зможуть
+							пояснити, як
+							працює інтернет, і створять перший сайт.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 2: Знайомство з Canva</span>
+						<i class="fas fa-image icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись створювати графічний контент
+							за
+							допомогою Canva.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Ознайомитись з інтерфейсом Canva,
+							розробити
+							розклад і логотип.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до Canva, інструктаж з
+							інструментів,
+							практичне створення дизайну.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення розкладу уроків і логотипу
+							для
+							сайту.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							готові
+							графічні елементи для власного проєкту.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 3: Вступ до WordPress</span>
+						<i class="fas fa-wordpress icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з платформою WordPress для
+							створення сайтів.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Зареєструвати акаунт, створити базовий
+							сайт.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до WordPress, реєстрація, вибір
+							теми,
+							створення першої сторінки.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Налаштування сайту з обраною темою і
+							контентом.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні матимуть
+							робочий сайт
+							на WordPress.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 4: Робота з адмін-панеллю WordPress</span>
+						<i class="fas fa-cogs icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти основами адмін-панелі
+							WordPress.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Налаштувати сайт через адмін-панель,
+							змінити
+							дизайн.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Огляд адмін-панелі, зміна
+							налаштувань, вибір
+							шаблонів.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Налаштування кольорів і шрифтів
+							сайту.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні зможуть
+							змінити дизайн
+							сайту через адмін-панель.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 5: Створення та редагування постів</span>
+						<i class="fas fa-pen icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись створювати та редагувати
+							пости в
+							WordPress.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Додати текст і медіа, відредагувати
+							пост.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до редактора, додавання
+							контенту,
+							збереження змін.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення посту з текстом і
+							зображеннями.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні опублікують
+							свій
+							перший пост.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 6: Робота зі сторінками WordPress</span>
+						<i class="fas fa-file-alt icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись із створенням і
+							редагуванням
+							сторінок.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити нову сторінку, використати
+							шаблони.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення різниці між постами і
+							сторінками,
+							практичне створення.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення сторінки "Про нас" з
+							унікальним
+							дизайном.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять і
+							налаштують
+							сторінку.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 7: Робота зі зображеннями</span>
+						<i class="fas fa-image icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись додавати і редагувати
+							зображення.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Завантажити зображення, створити
+							галерею.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Огляд медіа- бібліотеки, інструктаж з
+							редагування.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення слайдера з кількома
+							зображеннями.
+						</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні додадуть і
+							відредагують зображення на сайті.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 8: Віджети та панелі</span>
+						<i class="fas fa-th icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти додаванням віджетів на сайт.
+						</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Додати віджети, налаштувати їх
+							розташування.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до віджетів, практичне
+							додавання.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Додавання віджета календаря на
+							сайдбар.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні додадуть
+							функціональні
+							віджети.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 9: Робота з меню</span>
+						<i class="fas fa-bars icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись створювати і редагувати меню.
+						</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити нове меню, додати пункти.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Огляд меню в WordPress, практичне
+							налаштування.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення меню з трьома пунктами.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні налаштують
+							функціональне меню.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 10: Плагіни для функціональності</span>
+						<i class="fas fa-plug icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з плагінами для розширення
+							сайту.
+						</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Встановити плагін, налаштувати його.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до плагінів, вибір і
+							встановлення.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Встановлення плагіна для
+							SEO-оптимізації.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні додадуть нову
+							функцію
+							через плагін.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 11: Знайомство з HTML</span>
+						<i class="fas fa-code icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти основами HTML для
+							веб-розробки.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Вивчити основні теги, створити
+							структуру.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до HTML, пояснення тегів,
+							практика.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення сторінки з заголовками і
+							параграфами.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							базову
+							HTML-сторінку.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 12: Основні групи HTML-елементів</span>
+						<i class="fas fa-list icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Розібратися з типами HTML-елементів.
+						</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Вивчити семантичні та блочні теги.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення типів елементів, приклади
+							використання.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення сторінки з
+							div і section.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні
+							розпізнаватимуть
+							типи тегів.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 13: Форми та таблиці в HTML</span>
+						<i class="fas fa-table icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись створювати форми і таблиці.
+						</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити форму з полями, таблицю з
+							даними.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до
+							form і table, практичні приклади.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення форми для зворотного
+							зв’язку.
+						</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							робочу
+							форму і таблицю.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 14: Семантична верстка та валідація</span>
+						<i class="fas fa-check-circle icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти семантичною версткою.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Використовувати семантичні теги,
+							перевірити
+							код.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення семантики, практика,
+							валідація.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Переписування коду з
+							div на article.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні отримають
+							валідний код.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 15: Принципи верстки сторінок</span>
+						<i class="fas fa-paint-brush icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Розібратися з принципами верстки.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Проаналізувати макет, створити
+							структуру.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Аналіз дизайну, створення
+							HTML-скелета.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Верстка простої сторінки за макетом.
+						</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							базову
+							верстку.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 16: Знайомство з CSS</span>
+						<i class="fas fa-css3-alt icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з основами CSS.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Додати стилі до HTML, вивчити
+							селектори.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до CSS, пояснення селекторів,
+							практика.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Стилізація тексту і фону.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні застосуют
+							базові
+							CSS-стилі.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 17: Каскад і псевдокласи в CSS</span>
+						<i class="fas fa-layer-group icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Розібратися з каскадуванням і
+							псевдокласами.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Використати :hover, :active, зрозуміти
+							пріоритет.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення каскаду, практика з
+							псевдокласами.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Додавання ефектів :hover до кнопок.
+						</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							інтерактивні елементи.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 18: Стилізація тексту та шрифтів</span>
+						<i class="fas fa-font icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись стилізувати текст.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Налаштувати шрифти, розміри, відступи.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до властивостей тексту,
+							практичні
+							приклади.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Стилізація заголовків і параграфів.
+						</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні налаштують
+							текст
+							на сторінці.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 19: CSS-стилізація за макетом</span>
+						<i class="fas fa-draw-polygon icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Створити стилі за дизайн-макетом.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Реалізувати макет з кольорами і
+							розмірами.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Аналіз макету, кодування CSS.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Стилізація сторінки за наданим
+							дизайном.
+						</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							стилізовану сторінку.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 20: Блокова модель</span>
+						<i class="fas fa-cube icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти блоковою моделлю CSS.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Розібратися з margin, padding, border.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення моделі, практичні приклади.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Налаштування відступів і рамок.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні застосуют
+							блокову
+							модель.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 21: Flexbox</span>
+						<i class="fas fa-arrows-alt-h icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись використовувати Flexbox.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити гнучку розкладку.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до Flexbox, пояснення
+							властивостей.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Розташування елементів у рядок.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							гнучку
+							розкладку.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 22: Анімація ховерів</span>
+						<i class="fas fa-play-circle icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Додати анімацію при наведенні.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити ефект :hover.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення transition, практика
+							анімації.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Анімація кнопки при наведенні.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні додадуть
+							інтерактивність.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 23: Вступ до JavaScript</span>
+						<i class="fab fa-js-square icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з основами JavaScript.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Написати перший скрипт, підключити
+							його.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до JS, пояснення синтаксису.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення алерта на кнопці.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні запустять
+							простий
+							скрипт.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 24: Робота з DOM</span>
+						<i class="fas fa-sitemap icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти маніпуляцією DOM.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Змінити вміст сторінки через JS.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення DOM, практика з методами.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Зміна тексту на сторінці.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні змінять
+							елементи
+							DOM.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 25: Події в JavaScript</span>
+						<i class="fas fa-hand-pointer icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись обробляти події.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Додати обробник кліку.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення подій, практика з
+							addEventListener.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення кнопки з алертом.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні оброблятимуть
+							кліки.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 26: Контрольний проєкт</span>
+						<i class="fas fa-project-diagram icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Розробити командний проєкт.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити сайт за макетом.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Планування, розподіл ролей,
+							кодування.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Розробка сайту в команді.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні завершать
+							робочий
+							сайт.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 27: Захист проєкту</span>
+						<i class="fas fa-trophy icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Підготувати і презентувати проєкт.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Підготувати презентацію, відповісти на
+							питання.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Репетиція, фінальна презентація.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Презентація проєкту перед аудиторією.
+						</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні успішно
+							захистять
+							проєкт.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Акордеон для групи Pro -->
+			<h2 class="text-2xl font-semibold text-white mt-12 mb-4">Група Pro (13-16 років)</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 1: Знайомство з HTML</span>
+						<i class="fab fa-html5 icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти основами HTML для створення
+							веб-сторінок.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Вивчити теги, створити просту
+							структуру
+							сторінки.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до HTML, пояснення тегів,
+							написання
+							базового коду.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення сторінки з заголовками,
+							параграфами та зображеннями.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять і
+							збережуть свою першу HTML-сторінку.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 2: Семантична верстка та валідація</span>
+						<i class="fas fa-check-square icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись створювати семантичну
+							HTML-верстку.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Використовувати семантичні теги,
+							перевірити код.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення семантики, практика з
+							тегами,
+							валідація через онлайн-інструменти.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Переписування сторінки з
+							використанням
+						<header> та <footer>.</p>
+								<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні отримають
+									валідний семантичний код.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 3: Git і GitHub</span>
+						<i class="fab fa-git-alt icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з Git і GitHub для
+							контролю
+							версій.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Встановити Git, створити репозиторій.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до Git, інструктаж з команд,
+							створення репозиторію.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Завантаження проєкту на GitHub.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні зможуть
+							використовувати GitHub.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 4: Знайомство з CSS</span>
+						<i class="fab fa-css3-alt icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з основами CSS.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Додати стилі, вивчити селектори.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до CSS, пояснення селекторів,
+							практика.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Стилізація тексту і фону.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні застосуют
+							базові
+							CSS-стилі.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 5: Flexbox і стилізація за макетом</span>
+						<i class="fas fa-arrows-alt-v icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись використовувати Flexbox і
+							стилізувати за макетом.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити гнучку розкладку, реалізувати
+							дизайн.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до Flexbox, аналіз макету,
+							кодування.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Стилізація сторінки з Flexbox.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							адаптивну
+							розкладку.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 6: Псевдоелементи та фонові зображення</span>
+						<i class="fas fa-image icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти псевдоелементами і фоновимі
+							зображеннями.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Додати псевдоелементи, налаштувати
+							фон.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення ::before, ::after, практика
+							з
+							фоном.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Додавання фонового зображення.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять стилі
+							з
+							псевдоелементами.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 7: Позиціонування елементів</span>
+						<i class="fas fa-arrows-alt icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись позиціонувати елементи.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Використати position: absolute,
+							relative.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення типів позиціонування,
+							практика.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення модального вікна.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні
+							позиціонуватимуть
+							елементи.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 8: CSS-переходи та анімація</span>
+						<i class="fas fa-film icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Додати анімацію через CSS.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Використати transition і @keyframes.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення анімацій, практика з
+							transition.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Анімація кнопки при наведенні.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							анімований елемент.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 9: Адаптивна верстка</span>
+						<i class="fas fa-mobile-alt icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Створити адаптивний дизайн.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Використати медіа-запити, тестувати на
+							різних пристроях.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення адаптивності, кодування
+							медіа-запитів.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Адаптація сайту для мобільних.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							адаптивну
+							сторінку.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 10: SASS/SCSS</span>
+						<i class="fab fa-sass icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з препроцесорами
+							SASS/SCSS.
+						</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Написати змінні, вкладені стилі.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до SASS, практика з
+							синтаксисом.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення SCSS-файлу для стилів.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні застосуют SASS
+							у
+							проєкті.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 11: Bootstrap</span>
+						<i class="fab fa-bootstrap icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти бібліотекою Bootstrap.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Використати класи грида, компоненти.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до Bootstrap, практика з
+							гридом.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення сторінки з гридом
+							Bootstrap.
+						</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							стилізовану сторінку.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 12: Вступ до JavaScript</span>
+						<i class="fab fa-js-square icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з основами JavaScript.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Написати перший скрипт, підключити
+							його.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до JS, пояснення синтаксису.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення алерта на кнопці.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні запустять
+							простий
+							скрипт.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 13: Робота з DOM</span>
+						<i class="fas fa-sitemap icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти маніпуляцією DOM.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Змінити вміст сторінки через JS.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення DOM, практика з методами.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Зміна тексту на сторінці.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні змінять
+							елементи
+							DOM.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 14: Події та слухачі подій</span>
+						<i class="fas fa-hand-pointer icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись обробляти події.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Додати обробник кліку.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення подій, практика з
+							addEventListener.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення кнопки з алертом.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні оброблятимуть
+							кліки.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 15: Об’єкти та масиви</span>
+						<i class="fas fa-object-group icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти роботою з об’єктами і
+							масивами.
+						</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити об’єкт, попрацювати з
+							масивом.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення структури, практика з
+							методами.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення списку завдань.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні застосуют
+							об’єкти
+							і масиви.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 16: Асинхронний JavaScript</span>
+						<i class="fas fa-sync icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з асинхронністю в JS.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Використати проміси, async/await.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення асинхронності, практика.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення затримки з setTimeout.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні зрозуміють
+							асинхронність.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 17: HTTP-запити та REST API</span>
+						<i class="fas fa-exchange-alt icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись працювати з HTTP і API.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Виконати GET-запит, обробити дані.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення HTTP, практика з fetch.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Отримання даних з публічного API.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні отримають дані
+							з
+							API.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 18: Пагінація</span>
+						<i class="fas fa-list-ol icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Реалізувати пагінацію на сторінці.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити кнопки пагінації, обмежити
+							вміст.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення логіки, кодування
+							пагінації.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Додавання пагінації до списку.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							пагінований список.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 19: Вступ до React та JSX</span>
+						<i class="fab fa-react icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з React і JSX.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити перший компонент.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до React, пояснення JSX.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення простого компонента.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							базовий
+							React-компонент.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 20: React-компоненти</span>
+						<i class="fas fa-cubes icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти створенням компонентів.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити reusable компонент.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення компонентів, практика.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення кнопки-компонента.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні створять
+							багаторазовий компонент.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 21: Стилізація в React</span>
+						<i class="fas fa-paint-brush icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Навчитись стилізувати в React.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Використати CSS-модулі, Styled
+							Components.
+						</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення методів, практика
+							стилізації.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Стилізація компонента кнопки.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні застосуют
+							стилі в
+							React.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 22: React Hooks</span>
+						<i class="fas fa-anchor icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з React Hooks.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Використати useState, useEffect.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення хуків, практика.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Створення лічильника з useState.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні застосуют хуки
+							в
+							компонентах.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 23: React Router</span>
+						<i class="fas fa-road icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Налаштувати маршрутизацію в React.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити кілька маршрутів.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до React Router, практика.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Налаштування маршрутів для сторінок.
+						</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні налаштують
+							навігацію.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 24: Redux та Redux Toolkit</span>
+						<i class="fas fa-store icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Оволодіти управлінням станом з Redux.
+						</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити store, додати редюсери.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Пояснення Redux, практика з Toolkit.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Управління станом лічильника.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні застосуют
+							Redux у
+							проєкті.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 25: TypeScript у React</span>
+						<i class="fab fa-js-square icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Ознайомитись з TypeScript у React.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Додати типізацію до компонентів.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Вступ до TypeScript, практика.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Типізація пропсів компонента.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні застосуют
+							TypeScript.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 26: Фінальний проєкт</span>
+						<i class="fas fa-laptop-code icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Розробити командний веб-додаток.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Створити проєкт з React.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Планування, кодування, тестування.
+						</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Розробка повноцінного додатку.</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні завершать
+							проєкт.
+						</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button class="accordion-button w-full text-left focus:outline-none" onclick="toggleAccordion(this)">
+						<span>Урок 27: Захист проєкту</span>
+						<i class="fas fa-trophy icon"></i>
+					</button>
+					<div class="accordion-content bg-white p-4 rounded-b-lg">
+						<p class="animated-text"><i class="fas fa-bullseye"></i> Мета: Підготувати і презентувати проєкт.</p>
+						<p class="animated-text"><i class="fas fa-tasks"></i> Завдання: Підготувати презентацію, відповісти на
+							питання.</p>
+						<p class="animated-text"><i class="fas fa-cogs"></i> Хід роботи: Репетиція, фінальна презентація.</p>
+						<p class="animated-text"><i class="fas fa-laptop"></i> Практика: Презентація проєкту перед аудиторією.
+						</p>
+						<p class="animated-text"><i class="fas fa-check-circle"></i> Очікувані результати: Учні успішно
+							захистять
+							проєкт.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
+	<script src="/FSSprint/resources/js/jquery.min.js"></script>
+	<!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+	<script src="/FSSprint/resources/js/mixitup.min.js"></script>
+	<!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, comments.js]----------------->
+	<script src="/FSSprint/resources/swiper-js/swiper-bundle.min.js"></script>
+	<!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
+	<script src="/FSSprint/resources/mapbox-gl/mapbox-gl.js"></script>
+	<!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
+	<script src="/FSSprint/resources/js/email.min.js"></script>
+	<!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+	<script src="/FSSprint/resources/js/vanilla-tilt.min.js"></script>
+	<!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
+	<script src="/FSSprint/resources/js/anime.min.js"></script>
+	<!-----------------LOCAL (HOME)----------------->
+	<script src="/FSSprint/resources/js/home.js"></script>
+	<!-----------------LOCAL (ABOUT)----------------->
+	<script src="/FSSprint/resources/js/about.js"></script>
+	<!-----------------LOCAL (SERVICES)----------------->
+	<script src="/FSSprint/resources/js/services.js"></script>
+	<!-----------------LOCAL (PORTFOLIO)----------------->
+	<script src="/FSSprint/resources/js/portfolio.js"></script>
+	<!-----------------LOCAL (COMMENTS)----------------->
+	<script src="/FSSprint/resources/js/comments.js"></script>
+	<!-----------------LOCAL (MAIN FILE)----------------->
+	<script src="/FSSprint/resources/js/main.js"></script>
+
+	<!-----------------ЛОГІКА КОНТАКТІВ-------------------------->
+
+	<!-----------------ЛОГІКА АНІМАЦІЙ-------------------------->
+	<script defer>
+		const animate1 = anime.timeline({
+			targets: ".circle",
+			loop: true,
+			duration: 2000,
+			direction: "alternate",
+			easing: "easeInOutQuad",
+		});
+		animate1.add({
+			translateX: 350,
+		});
+
+		let dot = document.querySelectorAll(".dot");
+		for (let i = 0; i < dot.length; i++) {
+			const ind = dot[i];
+			const animate2 = anime.timeline({
+				targets: ind,
+				loop: true,
+				direction: "alternate",
+				delay: i * 100,
+			});
+			animate2.add({
+				scale: 2,
+			});
+		}
+
+		let span = document.querySelectorAll(".content .text span");
+		const animate3 = anime.timeline({
+			targets: span,
+			easing: "easeInOutExpo",
+			delay: anime.stagger(20, { direction: "reverse" }),
+			direction: "reverse",
+			autoplay: false,
+		});
+
+		animate3.add({
+			rotate: () => {
+				return anime.random(-360, 360);
+			},
+			translateX: () => {
+				return anime.random(-500, 500);
+			},
+			translateY: () => {
+				return anime.random(-500, 500);
+			},
+			duration: 3000,
+		});
+
+		const animate4 = anime({
+			targets: ".button",
+			scale: [0, 1],
+			delay: anime.stagger(200, { start: 7000 }),
+			autoplay: false,
+		});
+
+		const animate5 = anime({
+			targets: [
+				document.querySelectorAll(".info"),
+				document.querySelectorAll(".inp_field"),
+				".message",
+				".submit",
+			],
+			translateY: [50, 0],
+			rotateX: [90, 0],
+			opacity: [0, 1],
+			delay: anime.stagger(300, { start: 1000 }),
+			duration: 750,
+			autoplay: false,
+			easing: "easeOutQuint",
+		});
+
+		const animate6 = anime({
+			targets: [".services .t_dummy", ".services .hero-text"],
+			duration: 1000,
+			scaleX: [0, 1],
+			delay: anime.stagger(300, { start: 1000 }),
+			autoplay: false,
+		});
+
+		function resize() {
+			if (window.innerWidth <= 632) {
+				animate5.play();
+				animate3.play();
+				animate4.play();
+				animate6.play();
+			}
+		}
+		resize();
+		window.addEventListener("resize", resize);
+
+		// Accordion Toggle
+		function toggleAccordion(button) {
+			const content = button.nextElementSibling;
+			const icon = button.querySelector('.icon');
+			content.classList.toggle('open');
+			button.classList.toggle('open');
+			if (content.classList.contains('open')) {
+				icon.style.transform = 'rotate(180deg)';
+				// Trigger animation for text inside content
+				const texts = content.querySelectorAll('.animated-text');
+				texts.forEach((text, index) => {
+					setTimeout(() => {
+						text.style.opacity = '1';
+					}, index * 200); // Delay each line by 200ms
+				});
+			} else {
+				icon.style.transform = 'rotate(0deg)';
+			}
+		}
+	</script>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
